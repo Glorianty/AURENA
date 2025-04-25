@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURENA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barre supérieure -->
+    <div class="top-bar">
+        <div class="left">
+            <img src="Icons/se-connecter.svg" alt="Icône utilisateur" class="icon-user">
+            <a href="#">Se connecter</a>
+        </div>
+        <div class="right">
+            <a href="#">S’inscrire</a>
+            <img src="Icons/drapeau-fr.svg" alt="Drapeau Français" class="flag-icon">
+        </div>
+    </div>
+
+    <!-- Barre principale -->
+    <header class="main-header">
+        <nav class="nav-left">
+            <a href="#">Produits</a>
+            <a href="#">Aromathérapie</a>
+            <a href="#">À propos</a>
+        </nav>
+        
+        <a href="#" class="logo">
+            <img src="Icons/Logo-aurena.svg" alt="Logo Aurena" class="logo-img">
+        </a>
+
+        <nav class="nav-right">
+            <a href="#">Recherche</a>
+            <a href="#">Favoris</a>
+            <a href="#">Panier</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="slider">
+          <div class="slider-main" id="main-image">
+            <span class="arrow left" onclick="changeSlide(-1)">‹</span>
+            <div id="main-slide" style="width:100%; height:100%; background:#e6e6e6;"></div>
+            <span class="arrow right" onclick="changeSlide(1)">›</span>
+          </div>
+          <div class="slider-thumbs">
+            <div onclick="showSlide(0)"></div>
+            <div onclick="showSlide(1)"></div>
+            <div onclick="showSlide(2)"></div>
+            <div onclick="showSlide(3)"></div>
+          </div>
+        </div>
+    
+        <div class="product-details">
+          <div>
+            <h1>Bougie Sommeil Paisible</h1>
+            <h2>Pour Un Repos Profond et Réparateur</h2>
+            <div class="stars">★ ★ ★ ★ ☆ <small>(4.5 / 136) | En Stock</small></div>
+            <div class="price">100.00€</div>
+            <p>
+              Plongez dans un sommeil réparateur avec notre bougie Sommeil Paisible. Lavande, bois de santal et camomille créent une ambiance apaisante pour une nuit sereine.
+            </p>
+          </div>
+    
+          <div class="info-box">
+            <h4>Livraison</h4>
+            <p>À domicile ou en point relais</p>
+            <p>En stock – Expédition sous 24 - 48h</p>
+          </div>
+
+          <div class="quantity-wrapper">
+            <button class="qty-btn" id="decrease">−</button>
+            <input type="number" id="quantity" value="1" min="1" />
+            <button class="qty-btn" id="increase">+</button>
+          </div>
+          
+          <button class="btn-primary">Ajouter au panier</button>
+    
+    
+          <div class="accordion">
+            <div class="accordion-item">
+              <h3>Description <span class="plus-icon">+</span></h3>
+              <div class="accordion-content">
+                <p>Contenu de la description...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>Formats <span class="plus-icon">+</span></h3>
+              <div class="accordion-content">
+                <p>Contenu de la description...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>Pièces idéales <span class="plus-icon">+</span></h3>
+              <div class="accordion-content">
+                <p>Contenu de la description...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>Conseils de brûlage <span class="plus-icon">+</span></h3>
+              <div class="accordion-content">
+                <p>Contenu de la description...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3>Informations pratiques <span class="plus-icon">+</span></h3>
+              <div class="accordion-content">
+                <p>Contenu de la description...</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="delivery-info">
+            <h4>Livraison gratuite</h4>
+            <p>Livraison gratuite sur toutes vos commandes.</p>
+            <h4>Retours gratuits</h4>
+            <p>Retours sous 30 jours gratuits. <a href="#">Détails</a></p>
+          </div>
+    
+        </div>
+      </div>
+    
+      <script>
+        let current = 0;
+        const slides = document.querySelectorAll(".slider-thumbs div");
+        const mainSlide = document.getElementById("main-slide");
+    
+        function showSlide(index) {
+          current = index;
+          mainSlide.style.background = ["#e6e6e6", "#ccc", "#ddd", "#bbb"][index];
+        }
+    
+        function changeSlide(direction) {
+          current = (current + direction + slides.length) % slides.length;
+          showSlide(current);
+        }
+    
+        // Init
+        showSlide(0);
+      </script>
+
+ <!-- deroulant -->
+ <script>
+ document.querySelectorAll('.accordion-item h3').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+</script>
+
+<!-- nombre de produit acheter -->
+ <script>
+const qtyInput = document.getElementById("quantity");
+const increaseBtn = document.getElementById("increase");
+const decreaseBtn = document.getElementById("decrease");
+
+increaseBtn.addEventListener("click", () => {
+  qtyInput.value = parseInt(qtyInput.value) + 1;
+});
+
+decreaseBtn.addEventListener("click", () => {
+  if (parseInt(qtyInput.value) > 1) {
+    qtyInput.value = parseInt(qtyInput.value) - 1;
+  }
+});
+</script>
+    
+
+
+    </body>
+    </html>

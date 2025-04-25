@@ -55,8 +55,8 @@
   <!-- Zones de contenu -->
 
   <!-- Section Soin par l'Aromathérapie -->
-<section class="banniere-produit bloc">
-  <div class="produit-container ">
+<section class="banniere-produit">
+  <div class="produit-container">
       <div class="produit-image">
           <img src="img/close-up-woman-using-mobile-phone.jpg" alt="Femme avec bougie aromathérapie">
       </div>
@@ -72,7 +72,7 @@
   </div>
 </section>
   
-     <section class="bienfaits bloc>
+     <section class="bienfaits">
       <h2>Bienfaits</h2>
     
       <div class="bienfaits-grid">
@@ -99,7 +99,7 @@
     </section>
 
     <!-- Ingrédients principaux -->
-<section class="ingredients bloc">
+<section class="ingredients">
   <h2>Ingrédients principaux</h2>
   <div class="ingredients-grid">
     <div class="bloc-ingredient ingredient-soja">
@@ -128,7 +128,7 @@
 </section>
 
 <!-- Mode d’emploi -->
-<section class="mode-emploi bloc">
+<section class="mode-emploi">
   <div class="mode-emploi-overlay">
       <div class="mode-emploi-text">
           <h2>Mode d’emploi</h2>
@@ -142,7 +142,7 @@
 
 <!-- Avis expert -->
 
-<section class="experts-modern bloc">
+<section class="experts-modern">
   <h2>Testé et Approuvé par Nos Experts</h2>
 
   <div class="experts-container">
@@ -270,7 +270,6 @@
     const tabs = document.querySelectorAll(".tab-item");
     const indicator = document.querySelector(".tab-indicator");
     const contents = document.querySelectorAll(".product-content");
-    const blocs = document.querySelectorAll(".bloc")
     const body = document.body;
 
     tabs.forEach((tab, index) => {
@@ -283,7 +282,6 @@
         indicator.style.transform = `translateX(${index * 100}%)`;
 
         // Afficher le bon contenu
-        console.log(blocs)
         const target = tab.getAttribute("data-target");
         contents.forEach(section => {
           section.classList.add("hidden");
