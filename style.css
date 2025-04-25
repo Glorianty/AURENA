@@ -1,0 +1,1108 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --banner-height: 400px;
+}
+
+/* Typo pour tous les titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* fond gris clair comme sur ta capture */
+}
+
+/* BARRE SUPÉRIEURE NOIRE */
+.top-bar {
+    background-color: #000;
+    color: white;
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.top-bar .left,
+.top-bar .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.top-bar a:hover {
+    color: #ccc;
+}
+
+/* ICÔNE UTILISATEUR */
+.icon-user {
+    width: 16px;
+    height: 16px;
+}
+
+/* DRAPEAU FRANÇAIS */
+.flag-icon {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    
+}
+
+/* HEADER PRINCIPAL */
+.main-header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* NAVIGATION GAUCHE ET DROITE */
+.nav-left, .nav-right {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-left a,
+.nav-right a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    color: #666;
+}
+
+/* LOGO CENTRÉ */
+.logo-img {
+    height: 32px;
+    object-fit: contain;
+}
+
+/* BANNIÈRE PRINCIPALE */
+.main-banner {
+    width: 100%;
+    background-color: #e6e6e6; /* a remplacer par l'image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--banner-height);
+   /* height: 500px;  hauteur modifiable */
+    overflow: hidden;
+    background-image: url('');
+}
+
+.banner-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* SECTION NOS PRODUITS */
+
+.products-section {
+    background-color: #fff;
+    padding: 60px 40px;
+}
+
+.products-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.products-section .intro-text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    flex: 1 1 calc(25% - 24px);
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 260px;
+    background-color: #e6e6e6; /* bloc gris temporaire */
+}
+
+.product-info {
+    padding: 16px;
+}
+
+.product-info p {
+    font-size: 14px;
+    margin: 4px 0;
+    color: #333;
+}
+
+.price {
+    font-weight: bold;
+    display: block;
+    margin-top: 8px;
+}
+
+/* SECTION Soin par l’Aromathérapie */
+
+.aroma-section {
+    background-color: #fdf5e7;
+    padding: 0; /* plus de padding haut/bas */
+}
+
+.aroma-container {
+    display: flex;
+    align-items: stretch; /* pour égaliser la hauteur image + texte */
+flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.aroma-image {
+    flex: 0 0 30%;
+    
+}
+
+.aroma-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* plus de border-radius */
+}
+
+.aroma-text {
+    flex: 1;
+    padding: 100px 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aroma-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.aroma-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* SECTION bienfait */
+
+.benefits-section {
+    background-color: #fff;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.benefits-title {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 80px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    max-width: 180px;
+}
+
+.benefit-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+}
+
+.benefit-item h3 {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* SECTION expertise */
+
+.expertise-section {
+    background-color: #9A99AE;
+}
+
+.expertise-container {
+  display: flex;
+  align-items: stretch; /* pour égaliser la hauteur image + texte */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.expertise-text {
+  flex: 1;
+  padding: 100px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.expertise-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.expertise-text p {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.expertise-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 30px;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    width: 350px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.expertise-btn:hover {
+    background-color: white;
+    color: #6e6c84;
+}
+
+.expertise-image {
+  flex: 0 0 30%;
+}
+
+.expertise-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* plus de border-radius */
+}
+
+/* SECTION nos engagement */
+
+.commitments-section {
+  background-color: #fdf5e7;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.commitments-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.commitments-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 80px;
+}
+
+.commitments-grid {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.commitment-item {
+  
+  text-align: center;
+}
+
+.commitment-item img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+}
+
+.commitment-item p {
+  font-size: 14px;
+  color: #000;
+  line-height: 1.4;
+}
+
+/* SECTION nos engagement */
+
+.testimonials-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.review-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.review-header img {
+  width: 120px;
+  margin-bottom: 5px;
+}
+
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.arrow {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.arrow:hover {
+  color: #444;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 280px;
+  text-align: left;
+  flex: 0 0 auto;
+}
+
+.testimonial-card img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial-card .author {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+}
+
+
+
+/* SECTION Conception Artisanale de Nos Bougies */
+
+
+/* Bloc fond image */
+.craft-section {
+    background-image: url('img/gettyimages-5850483261.jpg'); /* Remplace par ton image */
+    background-size: cover;
+    background-position: center;
+    height: 430px;
+    width: 100%;
+    position: relative;
+}
+
+/* Overlay transparent pour le texte */
+.craft-overlay {
+    background: linear-gradient(to right, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.6) 100%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 80px;
+}
+
+.craft-text {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 300px;
+}
+
+.craft-text h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.craft-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+
+/* SECTION AVIS */
+
+.section-avis {
+  padding: 80px 20px;
+  background-color: #f9f9fb;
+  text-align: center;
+}
+
+.avis-header h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.etoiles-global {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.etoiles-global p {
+  font-size: 16px;
+  margin: 0;
+  color: #666;
+}
+
+.avis-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.avis-card {
+  background: white;
+  padding: 30px;
+  border-radius: 0px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  max-width: 300px;
+  width: 100%;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.avis-card:hover {
+  transform: translateY(-5px);
+}
+
+.etoiles {
+  font-size: 18px;
+  color: #6e6c84;
+  margin-bottom: 10px;
+}
+
+.avis-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.avis-text {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.auteur {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6e6c84;
+}
+
+
+ 
+
+/* BARRE ONGLET */
+.product-tabs {
+  max-width: 900px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+.product-tabs ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.tab-item {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.tab-item.active {
+  font-weight: bold;
+}
+.tab-indicator {
+  height: 8px;
+  background: #333;
+  width: 25%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* CONTENU PRODUIT */
+.product-content {
+  width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  transition: opacity 0.3s;
+}
+.hidden {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+/* CONTENU page sommeil */
+
+ /* style page les produits */
+
+  /* FONDS PAR PRODUIT */
+  .bg-sommeil {
+    background-color: #ffffff;
+  }
+  .bg-serenite {
+    background-color: #fff1e0;
+  }
+  .bg-harmonie {
+    background-color: #f0f6e9;
+  }
+  .bg-immunite {
+    background-color: #fbe8f1;
+  }
+
+/* SECTION Sommeil */
+
+.banniere-produit {
+  background-color: #fdf5e7;
+  padding: 0; /* plus de padding haut/bas */
+}
+
+.produit-container {
+  display: flex;
+  align-items: stretch; /* pour égaliser la hauteur image + texte */
+flex-wrap: wrap;
+max-width: 100%;
+  margin: 0 auto;
+}
+
+.produit-image {
+  flex: 0 0 30%;
+  
+}
+
+.produit-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* plus de border-radius */
+}
+
+.produit-text {
+  flex: 1;
+  padding: 100px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.produit-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.produit-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* SECTION bienfait */
+
+.bienfaits {
+  background-color: #fff;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.bienfaits h2 {
+  font-size: 28px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.bienfaits h3 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.bienfaits-grid {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.bienfait-item {
+  max-width: 250px;
+}
+
+.bienfait-item img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+
+
+
+/* Ingrédients principaux */
+.ingredients {
+  background-color: #e7edef;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.ingredients h2 {
+  font-size: 28px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.ingredients h3{
+  margin-bottom: 10px;
+}
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+
+.ingredient-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bloc-ingredient{
+  background-color: #e7edef;
+  padding: 80px 20px;
+  text-align: center;
+
+}
+
+.ingredient-lavande{
+  background-color: #C8D8DC;
+}
+.ingredient-bois-santal{
+  background-color: #F8F8F8;
+}
+.ingredient-camomille {
+background-color: #C8D8DC;
+}
+.ingredient-soja{
+  background-color: #F8F8F8;
+}
+
+
+/* SECTION mode d'emploi */
+
+
+/* Bloc fond image */
+.mode-emploi {
+  background-image: url('img/25697923.jpg'); /* Remplace par ton image */
+  background-size: cover;
+  background-position: center;
+  height: 430px;
+  width: 100%;
+  position: relative;
+}
+
+/* Overlay transparent pour le texte */
+.mode-emploi-overlay {
+  background: linear-gradient(to right, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.6) 100%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 80px;
+}
+
+.mode-emploi-text {
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 300px;
+}
+
+.mode-emploi-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+}
+
+.mode-emploi-text p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Avis expert */
+
+.experts-modern {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.experts-modern h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 50px
+}
+
+.experts-modern h2 span {
+  color: #DCE7EA;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.experts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.expert-card-modern {
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.expert-card-modern:hover {
+  transform: translateY(-6px);
+}
+
+.expert-img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 25px;
+}
+
+.expert-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.expert-card-modern blockquote {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.expert-card-modern cite {
+  font-size: 14px;
+  color: #000;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Bouton moderne */
+.experts-cta {
+  margin-top: 50px;
+}
+
+.btn-modern {
+  background-color: #C8D8DC;
+  color: #000000;
+  padding: 14px 32px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-modern:hover {
+  background-color: #DCE7EA;
+}
+
+/* autres bougie */
+
+.autres-bougies {
+  background-color: white;
+  text-align: center;
+}
+
+.autres-bougies-texte h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.autres-bougies-texte p {
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.bougies-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.carte-bougie {
+  flex: 1;
+  min-width: 250px;
+  text-decoration: none;
+  height: 400px;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.carte-bougie:hover {
+  transform: scale(1.03);
+}
+
+.carte-bougie span, .h1{
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: 'Playfair Display', serif;
+}
+
+
+.carte-bougie {
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+
+
+
+/* SECTION footer */
+
+footer.footer {
+  background: #1e1e2f;
+  color: #f5f5f5;
+  font-family: 'Inter', sans-serif;
+  padding: 60px 20px 30px;
+}
+
+.footer-newsletter {
+  
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.footer-newsletter h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-newsletter p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-newsletter input[type="email"] {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  flex: 1;
+  min-width: 250px;
+  max-width: 600px;
+  background-color: #ffffff;
+}
+
+.footer-newsletter button {
+  background: #ffffff;
+  color: #1e1e2f;
+  border: none;
+  font-weight: 600;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+  background: #cccccc;
+}
+
+/* LIENS */
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #333;
+  padding-top: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+/* BOTTOM LINE */
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
