@@ -10,48 +10,69 @@
 <body>
     <!-- Barre supérieure -->
     <div class="top-bar">
-        <div class="left">
-            <img src="Icons/se-connecter.svg" alt="Icône utilisateur" class="icon-user">
-            <a href="#">Se connecter</a>
-        </div>
-        <div class="right">
-            <a href="#">S’inscrire</a>
-            <img src="Icons/drapeau-fr.svg" alt="Drapeau Français" class="flag-icon">
-        </div>
+      <div class="left">
+          <img src="Icons/se-connecter.svg" alt="Icône utilisateur" class="icon-user">
+          <a href="#">Se connecter</a>
+      </div>
+      <div class="right">
+          <a href="#">S’inscrire</a>
+          <img src="Icons/drapeau-fr.svg" alt="Drapeau Français" class="flag-icon">
+      </div>
+  </div> 
+
+  <!-- Barre principale -->
+  <header class="site-header">
+    <div class="bloc-header">
+      <!-- Logo à gauche -->
+      <a href="page accueil.html" class="logo">
+        <img src="Icons/Logo-aurena.svg" alt="Logo Auréna">
+      </a>
+  
+      <!-- Zone de recherche -->
+      <div class="search-bar">
+        <input type="text" placeholder="Rechercher">
+        <button aria-label="Recherche">
+          <img src="Icons/recherche.svg" alt="">
+        </button>
+      </div>
+  
+      <!-- Liens utilitaires à droite -->
+      <nav class="nav-right">
+        <a href="#" class="nav-link">Produits</a>
+        <a href="#" class="nav-link">Aromathérapie</a>
+        <a href="#" class="nav-link">À propos</a>
+        <button class="icon-btn">
+          <img src="Icons/favoris.svg" alt="Favoris">
+        </button>
+        <button class="icon-btn">
+          <img src="Icons/panier.svg" alt="Panier">
+        </button>
+      </nav>
     </div>
+  </header>
 
-    <!-- Barre principale -->
-    <header class="main-header">
-        <nav class="nav-left">
-            <a href="#">Produits</a>
-            <a href="#">Aromathérapie</a>
-            <a href="#">À propos</a>
-        </nav>
-        
-        <a href="#" class="logo">
-            <img src="Icons/Logo-aurena.svg" alt="Logo Aurena" class="logo-img">
-        </a>
-
-        <nav class="nav-right">
-            <a href="#">Recherche</a>
-            <a href="#">Favoris</a>
-            <a href="#">Panier</a>
-        </nav>
-    </header>
-
-    <div class="container">
+    <div class="product-container">
 
         <div class="slider">
           <div class="slider-main" id="main-image">
             <span class="arrow left" onclick="changeSlide(-1)">‹</span>
-            <div id="main-slide" style="width:100%; height:100%; background:#e6e6e6;"></div>
+            <img id="main-img" src="./img/sommeil-img-4.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
+            <!--<div id="main-slide" style="width:100%; height:100%; background:#e6e6e6;"></div>-->
             <span class="arrow right" onclick="changeSlide(1)">›</span>
           </div>
           <div class="slider-thumbs">
-            <div onclick="showSlide(0)"></div>
-            <div onclick="showSlide(1)"></div>
-            <div onclick="showSlide(2)"></div>
-            <div onclick="showSlide(3)"></div>
+            <div>
+              <img src="./img/sommeil-img-4.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
+            </div>
+            <div >
+              <img src="./img/sommeil-img-4.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
+            </div>
+            <div >
+              <img src="./img/sommeil-img-4.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
+            </div>
+            <div >
+              <img src="./img/sommeil-img-4.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
+            </div>
           </div>
         </div>
     
@@ -67,25 +88,29 @@
           </div>
     
           <div class="info-box">
-            <h4>Livraison</h4>
+            <h4>Livraison </h4>
             <p>À domicile ou en point relais</p>
             <p>En stock – Expédition sous 24 - 48h</p>
           </div>
+          <div class="purshase_tools">
 
-          <div class="quantity-wrapper">
-            <button class="qty-btn" id="decrease">−</button>
-            <input type="number" id="quantity" value="1" min="1" />
-            <button class="qty-btn" id="increase">+</button>
+            <div class="quantity-wrapper">
+                <button class="qty-btn" id="decrease">−</button>
+                <input type="number" id="quantity" value="1" min="1" />
+                <button class="qty-btn" id="increase">+</button>
+              </div>
+              
+              <button class="btn-primary">Ajouter au panier</button>
+        
           </div>
-          
-          <button class="btn-primary">Ajouter au panier</button>
-    
     
           <div class="accordion">
             <div class="accordion-item">
               <h3>Description <span class="plus-icon">+</span></h3>
               <div class="accordion-content">
-                <p>Contenu de la description...</p>
+                <p>Contenu de la description...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper imperdiet nisl sed vulputate. Mauris pretium tempus enim at semper. Aenean nisl magna, placerat eu est a, ultrices posuere massa. Vivamus elementum quam eget diam sollicitudin, quis lacinia arcu aliquet. Pellentesque aliquam dui vitae velit aliquam sollicitudin. Donec id nibh ex. Nullam venenatis enim suscipit erat ornare eleifend. Vestibulum consectetur vestibulum urna et elementum.
+
+                    Praesent nibh dui, euismod a purus ut, cursus sollicitudin nunc. Donec feugiat diam sit amet auctor placerat. Nulla pretium malesuada magna, a mollis dolor semper sed. In condimentum nisi sagittis sagittis fermentum. Pellentesque semper ornare quam rutrum iaculis. Nulla tempor magna et ante venenatis, sit amet aliquet libero ullamcorper. Curabitur maximus lacus vel elit efficitur condimentum. Aliquam finibus lorem porttitor, ornare turpis in, pulvinar mauris. Ut non velit sagittis, sodales lacus id, fermentum enim. Nam semper, elit quis iaculis congue, velit justo consectetur nunc, sed consequat dui purus at mi. Ut nec consequat arcu. Maecenas in fermentum dolor, at scelerisque velit. Donec molestie, neque a bibendum maximus, dui arcu pretium diam, nec ullamcorper velit lorem nec turpis.</p>
               </div>
             </div>
             <div class="accordion-item">
@@ -123,21 +148,229 @@
     
         </div>
       </div>
+
+      <section class="ingrédient-section">
+        <div class="ingrédient-container">
+            <div class="ingrédient-image">
+                <img src="img/close-up-woman-using-mobile-phone.jpg" alt="Femme avec bougie aromathérapie">
+            </div>
+            <div class="ingrédient-text">
+                <h2>Soin par l’Aromathérapie</h2>
+                <p>
+                    L’aromathérapie est une pratique ancestrale qui utilise les huiles essentielles et les arômes naturels
+                    pour améliorer le bien-être physique et émotionnel. Nos bougies, riches en parfums thérapeutiques, sont
+                    conçues pour offrir une expérience sensorielle apaisante, idéale pour équilibrer votre corps et votre
+                    esprit au quotidien.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="fabrication-section">
+        <div class="container">
+            <h2 class="fabrication-title">Une fabrication française, responsable et de qualité</h2>
+            
+            <div class="fabrication-grid">
+                <!-- Engagement 1 -->
+                <div class="fabrication-item">
+                    <img src="Icons/pictos/affection.svg" alt="Fabrication artisanale">
+                    <p><strong>FABRICATION ARTISANALE</strong><br>100% fait main</p>
+                </div>
+    
+                <!-- Engagement 2 -->
+                <div class="fabrication-item">
+                    <img src="Icons/pictos/eco-responsable.svg" alt="Éco-responsable">
+                    <p><strong>ÉCO-RESPONSABLE</strong><br>Ingrédients Naturels</p>
+                </div>
+    
+                <!-- Engagement 3 -->
+                <div class="fabrication-item">
+                    <img src="Icons/pictos/animal.svg" alt="Vegan">
+                    <p><strong>VEGAN</strong><br>Non testé sur les animaux</p>
+                </div>
+    
+                <!-- Engagement 4 -->
+                <div class="fabrication-item">
+                    <img src="Icons/pictos/femme medecin.svg" alt="Efficacité prouvée">
+                    <p><strong>EFFICACITÉ PROUVÉE,</strong><br>validée par des experts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Section Vos avis ===== -->
+<section class="reviews">
+  <h2 class="reviews__title">Vos avis</h2>
+
+  <!-- Onglets -->
+  <nav class="reviews__tabs">
+    <div class="reviews__indicator"></div>
+  </nav>
+
+  <!-- Contenu de l’onglet actif -->
+  <div class="reviews__panel">
+    <div class="reviews__overview">
+      <h3 class="overview__title">Vue d’ensemble des notes</h3>
+      <p class="overview__subtitle">
+        Sélectionnez une ligne ci-dessous pour filtrer par classement
+      </p>
+
+      <ul class="overview__bars">
+        <li class="bar-item">
+          <span class="bar-item__label">5 étoiles</span>
+          <div class="bar-item__bar">
+            <div class="bar-item__fill" style="width: 96%;"></div>
+          </div>
+          <span class="bar-item__count">96</span>
+        </li>
+        <li class="bar-item">
+          <span class="bar-item__label">4 étoiles</span>
+          <div class="bar-item__bar">
+            <div class="bar-item__fill" style="width: 27%;"></div>
+          </div>
+          <span class="bar-item__count">27</span>
+        </li>
+        <li class="bar-item">
+          <span class="bar-item__label">3 étoiles</span>
+          <div class="bar-item__bar">
+            <div class="bar-item__fill" style="width: 7%;"></div>
+          </div>
+          <span class="bar-item__count">7</span>
+        </li>
+        <li class="bar-item">
+          <span class="bar-item__label">2 étoiles</span>
+          <div class="bar-item__bar">
+            <div class="bar-item__fill" style="width: 2%;"></div>
+          </div>
+          <span class="bar-item__count">2</span>
+        </li>
+        <li class="bar-item">
+          <span class="bar-item__label">1 étoile</span>
+          <div class="bar-item__bar">
+            <div class="bar-item__fill" style="width: 4%;"></div>
+          </div>
+          <span class="bar-item__count">4</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="reviews__summary">
+      <h3 class="summary__title">Notes globales</h3>
+      <div class="summary__rating">
+        <span class="summary__score">4.5 <p></span>
+        <span class="summary__stars">
+          ★★★★☆  
+        </span>
+        <a href="#" class="summary__link">136 avis</a>
+      </div>
+      <p class="summary__recommend">
+        39 sur 39 (100 %) recommande ce produit
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- autres bougie -->
+
+<section class="product-content hidden" id="serenite">
+  <h1>Sérénité</h1>
+  <p>Contenu spécifique pour Sérénité.</p>
+</section>
+
+<section class="product-content hidden" id="harmonie">
+  <h1>Harmonie</h1>
+  <p>Contenu spécifique pour Harmonie.</p>
+</section>
+
+<section class="product-content hidden" id="immunite">
+  <h1>Immunité</h1>
+  <p>Contenu spécifique pour Immunité.</p>
+</section>
+
+<section class="autres-bougies">
+  <div class="autres-bougies-texte">
+    <h2>Découvrez nos autres bougies</h2>
+    <p>et trouvez celle qui correspond à vos besoins</p>
+  </div>
+
+  <div class="bougies-grid">
+    <a href="#" class="carte-bougie">
+      <span>Sérénité</span>
+    </a>
+    <a href="#" class="carte-bougie">
+      <span>Harmonie</span>
+    </a>
+    <a href="#" class="carte-bougie">
+      <span>Immunité</span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-newsletter">
+    <h3>Inscrivez-vous à notre newsletter</h3>
+    <p>Recevez 10% de réduction sur votre première commande en rejoignant notre communauté.</p>
+    <form>
+      <input type="email" placeholder="Votre adresse e-mail" required>
+      <button type="submit">S’inscrire</button>
+    </form>
+  </div>
+
+  <div class="footer-links">
+    <div class="footer-column">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Expéditions & Livraisons</a></li>
+        <li><a href="#">Paiement sécurisé</a></li>
+        <li><a href="#">CGV & CGU</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>La marque</h4>
+      <ul>
+        <li><a href="#">Produit</a></li>
+        <li><a href="#">Aromathérapie</a></li>
+        <li><a href="#">À propos</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Liens utiles</h4>
+      <ul>
+        <li><a href="#">Conditions générales de vente</a></li>
+        <li><a href="#">Questions fréquentes</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© Auréna. Tous droits réservés. Copyright 2024©</p>
+  </div>
+</footer>
     
       <script>
-        let current = 0;
-        const slides = document.querySelectorAll(".slider-thumbs div");
-        const mainSlide = document.getElementById("main-slide");
+        let img_links = ["","","",""]
+        let mainimg = document.getElementById("main-img")
+        let displayimg1 = document.getElementById("display_img-1")
+        displayimg1.addEventListener('click', console.log('hi'))
+
+
+        displayimg
+       // let current = 0;
+      //  const slides = document.querySelectorAll(".slider-thumbs div");
+      //  const mainSlide = document.getElementById("main-slide");
     
-        function showSlide(index) {
-          current = index;
-          mainSlide.style.background = ["#e6e6e6", "#ccc", "#ddd", "#bbb"][index];
-        }
+      //  function showSlide(index) {
+      //    current = index;
+      //    mainSlide.style.background = ["./", "#ccc", "#ddd", "#bbb"][index];
+       // }
     
-        function changeSlide(direction) {
-          current = (current + direction + slides.length) % slides.length;
-          showSlide(current);
-        }
+       //function changeSlide(direction) {
+        //  current = (current + direction + slides.length) % slides.length;
+        //  showSlide(current);
+       // }
     
         // Init
         showSlide(0);
@@ -168,6 +401,13 @@ decreaseBtn.addEventListener("click", () => {
     qtyInput.value = parseInt(qtyInput.value) - 1;
   }
 });
+
+
+// après avoir ajouté/retiré la classe active sur les .reviews__tab
+const idx = Array.from(document.querySelectorAll('.reviews__tab'))
+               .findIndex(tab => tab.classList.contains('reviews__tab--active'));
+document.querySelector('.reviews__indicator')
+        .style.transform = `translateX(${idx * 100}%)`;
 </script>
     
 

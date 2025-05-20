@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Produits Auréna</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 
  <!-- Barre supérieure -->
- <div class="top-bar">
-  <div class="left">
-      <img src="Icons/se-connecter.svg" alt="Icône utilisateur" class="icon-user">
-      <a href="#">Se connecter</a>
-  </div>
-  <div class="right">
-      <a href="#">S’inscrire</a>
-      <img src="Icons/drapeau-fr.svg" alt="Drapeau Français" class="flag-icon">
-  </div>
-</div>
+    <div class="top-bar">
+        <div class="left">
+            <img src="Icons/se-connecter.svg" alt="Icône utilisateur" class="icon-user">
+            <a href="#">Se connecter</a>
+        </div>
+        <div class="right">
+            <a href="#">S’inscrire</a>
+            <img src="Icons/drapeau-fr.svg" alt="Drapeau Français" class="flag-icon">
+        </div>
+    </div> 
 
-<!-- Barre principale -->
-<header class="main-header">
-  <nav class="nav-left">
-      <a href="#">Produits</a>
-      <a href="#">Aromathérapie</a>
-      <a href="#">À propos</a>
-  </nav>
-  
-  <a href="#" class="logo">
-      <img src="Icons/Logo-aurena.svg" alt="Logo Aurena" class="logo-img">
-  </a>
+    <!-- Barre principale -->
+    <header class="site-header">
+      <div class="bloc-header">
+        <!-- Logo à gauche -->
+        <a href="page accueil.html" class="logo">
+          <img src="Icons/Logo-aurena.svg" alt="page accueil.html">
+        </a>
+    
+        <!-- Zone de recherche -->
+        <div class="search-bar">
+          <input type="text" placeholder="Rechercher">
+          <button aria-label="Recherche">
+            <img src="Icons/recherche.svg" alt="">
+          </button>
+        </div>
+    
+        <!-- Liens utilitaires à droite -->
+        <nav class="nav-right">
+          <a href="#" class="nav-link">Produits</a>
+          <a href="#" class="nav-link">Aromathérapie</a>
+          <a href="#" class="nav-link">À propos</a>
+          <button class="icon-btn">
+            <img src="Icons/favoris.svg" alt="Favoris">
+          </button>
+          <button class="icon-btn">
+            <img src="Icons/panier.svg" alt="Panier">
+          </button>
+        </nav>
+      </div>
+    </header>
 
-  <nav class="nav-right">
-      <a href="#">Recherche</a>
-      <a href="#">Favoris</a>
-      <a href="#">Panier</a>
-  </nav>
-</header>
+<body>
 
-<body class="bg-sommeil">
-
-  <!-- Barre de navigation -->
+  <!-- Nav onglets -->
   <nav class="product-tabs">
     <ul>
       <li class="tab-item active" data-target="sommeil">Sommeil Paisible</li>
@@ -52,139 +64,56 @@
     <div class="tab-indicator"></div>
   </nav>
 
-  <!-- Zones de contenu -->
-
-  <!-- Section Soin par l'Aromathérapie -->
-<section class="banniere-produit">
-  <div class="produit-container">
-      <div class="produit-image">
-          <img src="img/close-up-woman-using-mobile-phone.jpg" alt="Femme avec bougie aromathérapie">
-      </div>
-      <div class="produit-text">
-          <h2>Sommeil</h2>
-          <p>
-            Cette bougie a été spécialement conçue pour favoriser un sommeil réparateur.
-            Enrichie de lavande, bois de santal et camomille, elle crée une atmosphère propice à la relaxation 
-            et à l’endormissement. Les arômes apaisants de ces huiles essentielles agissent sur votre corps et votre esprit, 
-            réduisant le stress et facilitant un sommeil profond.
-          </p>
-      </div>
-  </div>
-</section>
-  
-     <section class="bienfaits">
-      <h2>Bienfaits</h2>
-    
-      <div class="bienfaits-grid">
-        <div class="bienfait-item">
-          <img src="Icons/pictos/Theraphy.svg" alt="Réduit les tensions">
-          <h3><strong>Réduit les tensions<br>et calme l'esprit</strong></h3>
+  <!-- TEMPLATE UNIQUE : tout commence vide, JS va injecter -->
+  <main id="main-content">
+    <!-- BANNIÈRE -->
+    <section class="banniere-produit">
+      <div class="produit-container">
+        <div class="produit-image">
+          <img src="" alt="Image produit" />
         </div>
-    
-        <div class="bienfait-item">
-          <img src="Icons/pictos/Insomnia 2.svg" alt="Sommeil réparateur">
-          <h3><strong>Favorise un sommeil<br>réparateur et de qualité</strong></h3>
-        </div>
-    
-        <div class="bienfait-item">
-          <img src="Icons/pictos/Relax.svg" alt="Atmosphère apaisante">
-          <h3><strong>Apporte une atmosphère<br>apaisante pour vos soirées</strong></h3>
-        </div>
-    
-        <div class="bienfait-item">
-          <img src="Icons/pictos/Sleep.svg" alt="Réduire les réveils nocturnes">
-          <h3><strong>Réduit les réveils<br>nocturnes</strong></h3>
+        <div class="produit-text">
+          <h2 id="produit-text_titre"></h2>
+          <p id="produit-text_desc"></p>
         </div>
       </div>
     </section>
 
-    <!-- Ingrédients principaux -->
-<section class="ingredients">
-  <h2>Ingrédients principaux</h2>
-  <div class="ingredients-grid">
-    <div class="bloc-ingredient ingredient-soja">
-      <h3>Cire naturelle de soja</h3>
-      <p>Pour une combustion <p>propre et durable.</p>
-    </div>
-    <div class="bloc-ingredient ingredient-lavande">
-      <h3>Huiles de lavande</h3>
-      <p>Connue pour ses propriétés <p> relaxantes</p>
-    </div>
-    <div class="ingredient-img">
-      <img src="img/flatlay-with-organic-white-soy-wax-flakeshandmade-candles-diy-hobby-idea.jpg" alt="Cire de soja">
-    </div>
-    <div class="ingredient-img">
-      <img src="img/cinnamon-sticks-row-stone-surface.jpg" alt="Bois de santal">
-    </div>
-    <div class="bloc-ingredient ingredient-bois-santal">
-      <h3>Bois de santal</h3>
-      <p>Apporte une note<p> chaleureuse et apaisante</p>
-    </div>
-    <div class="bloc-ingredient ingredient-camomille">
-      <h3>Camomille</h3>
-      <p>Aide à détendre les muscles<p> et à calmer l’anxiété</p>
-    </div>
-  </div>
-</section>
+    <!-- BIENFAITS -->
+    <section class="bienfaits">
+      <h2>Bienfaits</h2>
+      <div class="bienfaits-grid"></div>
+    </section>
 
-<!-- Mode d’emploi -->
-<section class="mode-emploi">
-  <div class="mode-emploi-overlay">
-      <div class="mode-emploi-text">
+    <!-- INGREDIENTS -->
+    <section class="ingredients">
+      <h2>Ingrédients principaux</h2>
+      <div class="ingredients-grid"></div>
+    </section>
+
+    <!-- MODE D’EMPLOI -->
+    <section class="mode-emploi">
+      <div class="mode-emploi-overlay">
+        <div class="mode-emploi-text">
           <h2>Mode d’emploi</h2>
           <p>
-            Allumez cette bougie 30 minutes avant de dormir pour préparer votre espace à la détente.
-            Pour un effet optimal, combinez-la avec des pratiques de relaxation douces comme la méditation ou la lecture.
+            
           </p>
+        </div>
       </div>
-  </div>
-</section>
+    </section>
 
-<!-- Avis expert -->
-
-<section class="experts-modern">
-  <h2>Testé et Approuvé par Nos Experts</h2>
-
-  <div class="experts-container">
-
-    <div class="expert-card-modern">
-      <div class="expert-img">
-        <img src="img/portrait-medecin-femme-2.jpg" alt="Dr Claire Martin">
+    <!-- EXPERTS -->
+    <section class="experts-modern">
+      <h2>Testé et Approuvé par Nos Experts</h2>
+      <div class="experts-container"></div>
+      <div class="experts-cta">
+        <button class="btn-modern">Ajouter au panier</button>
       </div>
-      <blockquote>
-        “L'utilisation d'une bougie aromathérapeutique avant de dormir peut aider à signaler au corps qu’il est temps de se détendre et se préparer au sommeil. En effet, des études ont montré que certaines huiles essentielles, comme la lavande et la camomille, ont des effets prouvés pour réduire le cortisol (l’hormone du stress) et favoriser un état de relaxation propice à un sommeil réparateur.”
-      </blockquote>
-      <cite>Dr. Claire Martin<br>Aromathérapie & bien-être</cite>
-    </div>
+    </section>
+  </main>
 
-    <div class="expert-card-modern">
-      <div class="expert-img">
-        <img src="img/portrait-medecin-femme.jpg" alt="Dr Marie Dupont">
-      </div>
-      <blockquote>
-        “L'utilisation de bougies aromathérapeutiques avec des senteurs comme la lavande et le bois de santal crée un environnement propice à la relaxation avant de se coucher...”
-      </blockquote>
-      <cite>Dr. Marie Dupont<br>Spécialiste stress & aromathérapie</cite>
-    </div>
-
-    <div class="expert-card-modern">
-      <div class="expert-img">
-        <img src="img/portrait-medecin-homme.jpg" alt="Dr Paul Lefevre">
-      </div>
-      <blockquote>
-        “Les bougies aux huiles essentielles de camomille et de lavande peuvent aider à induire un état de relaxation rapide...”
-      </blockquote>
-      <cite>Dr. Paul Lefevre<br>Expert en sommeil</cite>
-    </div>
-
-  </div>
-
-  <div class="experts-cta">
-    <button class="btn-modern">Ajouter au panier</button>
-  </div>
-</section>
-
-<!-- autres bougie -->
+  <!-- autres bougie -->
 
   <section class="product-content hidden" id="serenite">
     <h1>Sérénité</h1>
@@ -219,7 +148,8 @@
       </a>
     </div>
   </section>
-  
+
+  <!-- Footer (toujours présent) -->
   <footer class="footer">
     <div class="footer-newsletter">
       <h3>Inscrivez-vous à notre newsletter</h3>
@@ -264,38 +194,127 @@
     </div>
   </footer>
 
-
-  <!-- Script dynamique -->
-  <script>
-    const tabs = document.querySelectorAll(".tab-item");
-    const indicator = document.querySelector(".tab-indicator");
-    const contents = document.querySelectorAll(".product-content");
-    const body = document.body;
-
-    tabs.forEach((tab, index) => {
-      tab.addEventListener("click", () => {
-        // Onglet actif
-        tabs.forEach(t => t.classList.remove("active"));
-        tab.classList.add("active");
-
-        // Changer l'indicateur
-        indicator.style.transform = `translateX(${index * 100}%)`;
-
-        // Afficher le bon contenu
-        const target = tab.getAttribute("data-target");
-        contents.forEach(section => {
-          section.classList.add("hidden");
-          if (section.id === target) {
-            section.classList.remove("hidden");
-          }
-        });
-
-        // Changer le fond selon l'onglet
-        body.className = ""; // supprime toutes les classes
-        body.classList.add(`bg-${target}`);
-      });
+<SCRipt>
+  const data = {
+    sommeil: {
+      banniere: {
+        image: "img/sommeil-bougie-2.jpg",
+        titre: "Sommeil Paisible",
+        description: "Cette bougie a été spécialement conçue pour favoriser un sommeil réparateur. Enrichie de lavande, bois de santal et camomille, elle crée une atmosphère propice à la relaxation et à l’endormissement. Les arômes apaisants de ces huiles essentielles agissent sur votre corps et votre esprit, réduisant le stress et facilitant un sommeil profond."
+      },
+      bienfaits: [
+        { icone:"Icons/pictos/Theraphy.svg", titre:"Réduit les tensions et calme l'esprit" },
+        { icone:"Icons/pictos/Insomnia 2.svg", titre:"Favorise un sommeil réparateur et de qualité" },
+        { icone:"Icons/pictos/Relax.svg", titre:"Apporte une atmosphère apaisante pour vos soirées" },
+        { icone:"Icons/pictos/Sleep.svg", titre:"Réduit les réveils nocturnes" }
+      ],
+      ingredients: [
+        { type:"bloc", titre:"Cire naturelle de soja", texte:"Pour une combustion propre et durable.", color:'ingredient-blanc'},
+        { type:"bloc", titre:"Huiles de lavande", texte:"Connue pour ses propriétés relaxantes.", color:'ingredient-bleu' },
+        { type:"image", image:"img/flatlay-with-organic-white-soy-wax-flakeshandmade-candles-diy-hobby-idea.jpg", alt:"Cire de soja", color:'ingredient-blanc' },
+        { type:"image", image:"img/cinnamon-sticks-row-stone-surface.jpg", alt:"Bois de santal", color:'ingredient-blanc' },
+        { type:"bloc", titre:"Bois de santal", texte:"Apporte une note chaleureuse et apaisante.", color:'ingredient-blanc' },
+        { type:"bloc", titre:"Camomille", texte:"Aide à détendre les muscles et calmer l’anxiété.", color:'ingredient-bleu' }
+      ],
+      modeEmploi: "Allumez cette bougie 30 minutes avant de dormir pour préparer votre espace à la détente. Pour un effet optimal, combinez-la avec des pratiques de relaxation telles que la méditation ou la lecture.",
+      experts: [
+        { image:"img/portrait-medecin-femme-2.jpg", citation:"“L'utilisation d'une bougie aromathérapeutique…”", auteur:"Dr. Claire Martin<br>Aromathérapie & bien-être" },
+        { image:"img/portrait-medecin-femme.jpg", citation:"“L'utilisation de bougies aromathérapeutiques…”", auteur:"Dr. Marie Dupont<br>Spécialiste stress & aromathérapie" },
+        { image:"img/portrait-medecin-homme.jpg", citation:"“Les bougies aux huiles essentielles de…”", auteur:"Dr. Paul Lefevre<br>Expert en sommeil" }
+      ]
+    },
+  
+    serenite: {
+      banniere:{ image:"", titre:"", description:"" },
+      bienfaits:[], ingredients:[], modeEmploi:"", experts:[]
+    },
+    harmonie: {
+      banniere:{ image:"", titre:"", description:"" },
+      bienfaits:[], ingredients:[], modeEmploi:"", experts:[]
+    },
+    immunite: {
+      banniere:{ image:"", titre:"", description:"" },
+      bienfaits:[], ingredients:[], modeEmploi:"", experts:[]
+    }
+  };
+  
+  const tabs = document.querySelectorAll(".tab-item");
+  const indicator = document.querySelector(".tab-indicator");
+  const body = document.body;
+  
+  function updatePage(target) {
+    const info = data[target];
+  
+    // 1) BANNIÈRE
+    document.querySelector(".banniere-produit img").src  = info.banniere.image;
+    document.querySelector("#produit-text_titre").textContent  = info.banniere.titre;
+    document.querySelector("#produit-text_desc").textContent   = info.banniere.description;
+  
+    // 2) BIENFAITS
+    const gridB = document.querySelector(".bienfaits-grid");
+    gridB.innerHTML = "";
+    info.bienfaits.forEach(b => {
+      gridB.innerHTML += `
+        <div class="bienfait-item">
+          <img src="${b.icone}" alt="${b.titre}">
+          <h3><strong>${b.titre}</strong></h3>
+        </div>
+      `;
     });
-  </script>
+  
+    // 3) INGREDIENTS
+    const gridI = document.querySelector(".ingredients-grid");
+    gridI.innerHTML = "";
+    info.ingredients.forEach(i => {
+      console.log(i.color)
+      if (i.type==="bloc") {
+        gridI.innerHTML += `
+          <div class="bloc-ingredient" id="${i.color}">
+            <h3>${i.titre}</h3><p>${i.texte}</p>
+          </div>`;
+      } else {
+        gridI.innerHTML += `
+          <div class="ingredient-img">
+            <img src="${i.image}" alt="${i.alt}">
+          </div>`;
+      }
+    });
+  
+    // 4) MODE D'EMPLOI
+    document.querySelector(".mode-emploi-text p").textContent = info.modeEmploi;
+  
+    // 5) EXPERTS
+    const cont = document.querySelector(".experts-container");
+    cont.innerHTML = "";
+    info.experts.forEach(e => {
+      cont.innerHTML += `
+        <div class="expert-card-modern">
+          <div class="expert-img"><img src="${e.image}" alt=""></div>
+          <blockquote>${e.citation}</blockquote>
+          <cite>${e.auteur}</cite>
+        </div>`;
+    });
+  
+    // 6) Fond
+    body.className = ""; 
+    body.classList.add(`bg-${target}`);
+  }
+  
+  // Événement onglets
+  tabs.forEach((tab, idx) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      indicator.style.transform = `translateX(${idx*100}%)`;
+  
+      updatePage(tab.dataset.target);
+    });
+  });
+  
+  // Initialisation
+  updatePage("sommeil");
+</SCRipt>
+
 
 </body>
 </html>

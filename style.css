@@ -21,7 +21,7 @@ body {
 
 /* BARRE SUPÉRIEURE NOIRE */
 .top-bar {
-    background-color: #000;
+  background: #9A99AE;
     color: white;
     padding: 8px 40px;
     display: flex;
@@ -62,53 +62,145 @@ body {
 }
 
 /* HEADER PRINCIPAL */
-.main-header {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 40px;
-    border-bottom: 1px solid #ddd;
-    text-transform: uppercase;
-    font-size: 14px;
+
+/* Header */
+.bloc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  margin-left: 125px;
+  margin-right: 125px;
 }
 
-/* NAVIGATION GAUCHE ET DROITE */
-.nav-left, .nav-right {
-    display: flex;
-    gap: 30px;
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
 }
 
-.nav-left a,
-.nav-right a {
-    color: black;
-    text-decoration: none;
-    transition: color 0.3s;
+/* Logo */
+.logo img {
+  height: 50px;
+  width: auto;
 }
 
-.nav-left a:hover,
-.nav-right a:hover {
-    color: #666;
+/* Barre de recherche */
+.search-bar {
+  flex: 1;                    /* prend toute la place restante */
+  max-width: 400px;
+  margin: 0 2rem;
+  position: relative;
+}
+.search-bar input {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+.search-bar button {
+  position: absolute;    /* déjà présent */
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  
+  background: transparent; /* passe le fond en transparent */
+  border: none;            /* supprime le contour */
+  padding: 0;              /* retire tout padding éventuel */
+  margin: 0;               /* retire toute marge éventuelle */
+  cursor: pointer;         /* curseur main */
 }
 
-/* LOGO CENTRÉ */
-.logo-img {
-    height: 32px;
-    object-fit: contain;
+.search-bar button:focus {
+  outline: none;           /* supprime le focus par défaut */
 }
+.search-bar button img {
+  height: 20px;
+  width: 20px;
+}
+
+/* Nav droite */
+.nav-right {
+  display: flex;
+  align-items: center; /* centre verticalement tous les enfants */
+  gap: 1.5rem;         /* espace horizontal entre chaque item */
+}
+
+/* 2. Style des liens texte */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600; /* tous les liens sont en semi-bold */
+  color: #111;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+/* liens “Favoris” et “Panier” en light */
+.nav-link-Favoris,
+.nav-link-Panier {
+  display: inline-flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 200; /* light */
+  color: #111;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-right .nav-link:hover {
+  color: #777;
+}
+
+
+/* Boutons icônes “Favoris” / “Panier” */
+
+.icon-btn {
+  background: none;    /* supprime le fond */
+  border: none;        /* supprime le contour */
+  padding: 0;          /* retire tout padding par défaut */
+  display: inline-flex;
+  align-items: center; /* centre verticalement l'img */
+  justify-content: center;
+  cursor: pointer;
+  gap: 10px;
+}
+.icon-btn img {
+  width: 16px;         /* taille fixe */
+  height: 16px;
+  transition: opacity 0.2s;
+}
+.icon-btn:hover img {
+  opacity: 0.7;
+}
+
+/* espacer un peu plus les icônes des textes */
+.nav-right .icon-btn + .nav-link,
+.nav-right .nav-link + .icon-btn {
+  margin-left: 50px;
+}
+
+
 
 /* BANNIÈRE PRINCIPALE */
 .main-banner {
-    width: 100%;
-    background-color: #e6e6e6; /* a remplacer par l'image */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: var(--banner-height);
-   /* height: 500px;  hauteur modifiable */
-    overflow: hidden;
-    background-image: url('');
+  width: 100%;
+  height: 480px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 125px;
+  align-items: center;
+  overflow: hidden;
+  background-image: url(img/bannière-2.jpg);  /* ← ton fichier image ici */
+  background-size: cover;            /* pour qu'elle couvre tout le conteneur */
+  background-position: center 60%; /* déplace le point focal */
+  color:  #9A99AE;
+  font-weight: 100;
 }
+
+
 
 .banner-img {
     max-width: 100%;
@@ -135,8 +227,8 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .product-grid {
@@ -147,7 +239,7 @@ body {
 
 .product-card {
     flex: 1 1 calc(25% - 24px);
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     text-decoration: none;
     color: #000;
     display: flex;
@@ -160,26 +252,58 @@ body {
     transform: translateY(-5px);
 }
 
-.product-image {
+.product-image-sommeil {
     width: 100%;
     height: 260px;
-    background-color: #e6e6e6; /* bloc gris temporaire */
+    background-image: url(img/sommeil-bougie.jpg);
+    background-size: cover;            /* pour qu'elle couvre tout le conteneur */
+    background-position: center 55%; /* déplace le point focal */
+
 }
+.product-image-serenite {
+  width: 100%;
+    height: 260px;
+    background-image:url(img/sérénité-bougie.jpg);
+    background-size: cover;            /* pour qu'elle couvre tout le conteneur */
+    background-position: center 55%; /* déplace le point focal */
+
+}
+.product-image-immunite{
+  width: 100%;
+    height: 260px;
+    background-image: url(img/Immunité-bougie.jpg);
+    background-size: cover;            /* pour qu'elle couvre tout le conteneur */
+    background-position: center 55%; /* déplace le point focal */
+
+}
+.product-image-harmonie{
+  width: 100%;
+    height: 260px;
+    background-image: url(img/Harmonie-bougie.jpg);
+    background-size: cover;            /* pour qu'elle couvre tout le conteneur */
+    background-position: center 55%; /* déplace le point focal */
+
+}
+
 
 .product-info {
-    padding: 16px;
+  padding: 16px;
 }
 
-.product-info p {
-    font-size: 14px;
-    margin: 4px 0;
-    color: #333;
+.description-main {
+  font-size: 13px;
+  color: #000000;
+  margin-bottom:10px;
+}
+
+.description-secondary {
+  font-size: 11px;
+  color: #666;
 }
 
 .price {
-    font-weight: bold;
-    display: block;
-    margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /* SECTION Soin par l’Aromathérapie */
@@ -528,6 +652,7 @@ flex-wrap: wrap;
   font-size: 16px;
   margin: 0;
   color: #666;
+  margin-left: 10px;
 }
 
 .avis-list {
@@ -556,6 +681,19 @@ flex-wrap: wrap;
   font-size: 18px;
   color: #6e6c84;
   margin-bottom: 10px;
+}
+/* Style générique pour toutes les étoiles */
+.etoiles,
+.etoiles-global {
+  display: flex;
+  gap: 4px;              /* espace entre chaque étoile */
+  align-items: center;   
+}
+
+.star {
+  width: 20px;           /* ou la taille que tu veux */
+  height: auto;
+  display: block;
 }
 
 .avis-card h3 {
@@ -708,7 +846,7 @@ max-width: 100%;
 
 .bienfaits h2 {
   font-size: 28px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   font-weight: bold;
 }
 
@@ -726,7 +864,7 @@ max-width: 100%;
 }
 
 .bienfait-item {
-  max-width: 250px;
+  max-width: 170px;
 }
 
 .bienfait-item img {
@@ -772,24 +910,27 @@ max-width: 100%;
 }
 
 .bloc-ingredient{
-  background-color: #e7edef;
   padding: 80px 20px;
   text-align: center;
 
 }
 
-.ingredient-lavande{
-  background-color: #C8D8DC;
+/* soja → pastel vert */
+.ingredient-cire-naturelle-de-soja {
+  background-color: #F0F8F0;
 }
-.ingredient-bois-santal{
-  background-color: #F8F8F8;
+/* lavande → pastel lilas */
+.ingredient-huiles-de-lavande {
+  background-color: #F5E8FF;
 }
+/* bois de santal → pastel caramel */
+.ingredient-bois-de-santal {
+  background-color: #FFF4E6;
+}
+/* camomille → pastel jaune */
 .ingredient-camomille {
-background-color: #C8D8DC;
-}
-.ingredient-soja{
-  background-color: #F8F8F8;
-}
+  background-color: #FFF9E6;
+}s
 
 
 /* SECTION mode d'emploi */
@@ -816,24 +957,47 @@ background-color: #C8D8DC;
   padding: 0 80px;
 }
 
-.mode-emploi-text {
+/* Conteneur avec l’image de fond */
+.mode-emploi {
+  position: relative;
+  background-image: url('img/25697923.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 430px;
   width: 100%;
+}
+
+/* Overlay sombre qui recouvre toute la section */
+.mode-emploi-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Flexbox centré */
+  display: flex;
+  justify-content: center;  /* centre horizontalement */
+  align-items: center;      /* centre verticalement */
+  background: rgba(0,0,0,0.3);
+}
+
+/* Le bloc texte */
+.mode-emploi-text {
+  max-width: 600px;    /* largeur max du texte */
+  text-align: center;  /* centre le texte à l’intérieur */
+  padding: 0 20px;     /* un peu d’air sur les côtés */
   color: white;
-  text-align: center;
-  padding: 300px;
+  justify-content: center;
 }
 
 .mode-emploi-text h2 {
   font-size: 28px;
-  font-weight: bold;
   margin-bottom: 20px;
-
 }
 
 .mode-emploi-text p {
   font-size: 15px;
   line-height: 1.6;
-  margin-bottom: 12px;
 }
 
 /* Avis expert */
@@ -1116,8 +1280,16 @@ body {
   line-height: 1.5;
 }
 
-.container {
+.product-container {
   display: flex;
+  max-width: 1220px;
+  margin: auto;
+  margin-top: 100px;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.container {
   max-width: 1200px;
   margin: auto;
   gap: 60px;
@@ -1148,6 +1320,7 @@ body {
 .slider-thumbs {
   display: flex;
   gap: 10px;
+  margin-bottom: 100px;
 }
 
 .slider-thumbs div {
@@ -1182,6 +1355,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 100px;
 }
 
 .product-details h1 {
@@ -1193,12 +1367,6 @@ body {
   font-size: 18px;
   font-weight: 400;
   color: #444;
-}
-
-.price {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 10px 0;
 }
 
 .stars {
@@ -1233,8 +1401,15 @@ body {
   cursor: pointer;
 }
 
+.purshase_tools {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .btn-primary {
   background: #d9534f;
+ width:70% ;
   color: #fff;
 }
 
@@ -1278,6 +1453,18 @@ body {
   outline: none;
 }
 
+/* Supprimer les flèches sur Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Supprimer les flèches sur Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 /* ACCORDION */
 .accordion {
   border-top: 1px solid #ddd;
@@ -1285,6 +1472,7 @@ body {
 
 .accordion-item {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ddd;
@@ -1319,8 +1507,251 @@ body {
   display: block;
 }
 
+/* SECTION Soin par l’Aromathérapie */
+
+.ingrédient-section {
+  background-color: #fdf5e7;s
+  padding: 0; /* plus de padding haut/bas */
+}
+
+.ingrédient-container {
+  display: flex;
+  align-items: stretch; /* pour égaliser la hauteur image + texte */
+flex-wrap: wrap;
+max-width: 100%;
+  margin: 0 auto;
+}
+
+.ingrédient-image {
+  flex: 0 0 30%;
+  
+}
+
+.ingrédient-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* plus de border-radius */
+}
+
+/* formule ingrédient */
+
+.ingrédient-text {
+  flex: 1;
+  padding: 100px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ingrédient-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ingrédient-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
 
 
+/* SECTION fabrication française */
+
+.fabrication-section {
+  background-color: #EEF2F3;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.fabrication-title {
+  font-size: 20px;
+  margin-bottom: 80px;
+  font-weight: normal;
+}
+
+.fabrication-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 80px;
+}
+
+.fabrication-grid {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.fabrication-item {
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.fabrication-item img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+}
+
+.commitment-item p {
+  font-size: 14px;
+  color: #000;
+  line-height: 1.4;
+}
+
+/* ===== Vos avis ===== */
+.reviews {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+  margin-top: 100px;
+  font-family: 'Playfair Display', serif;
+}
+.reviews__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Onglets */
+
+.reviews__tab {
+  background: none;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  color: #333;
+  position: relative;
+}
+.reviews__tab--active {
+  color: #111;
+}
+
+
+/* Grille partagée */
+.reviews__panel {
+  display: grid;
+  display: flex;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  
+  justify-content: center;
+}
+@media (min-width: 700px) {
+  .reviews__panel {
+    grid-template-columns: 2fr 1fr;
+    
+  }
+}
+
+/* Barre de notes */
+.reviews__overview {
+  padding-right: 2rem;
+  margin-left: 85px;
+}
+.overview__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+.overview__subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+.overview__bars {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.bar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.bar-item__label {
+  flex: 0 0 80px;
+  font-size: 0.9rem;
+}
+.bar-item__bar {
+  flex: 1;
+  background: #eee;
+  border-radius: 999px;
+  overflow: hidden;
+  height: 8px;
+}
+.bar-item__fill {
+  height: 100%;
+  background: #8e8ea4;
+  border-radius: 999px;
+}
+.bar-item__count {
+  flex: 0 0 24px;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+/* Résumé global */
+.reviews__summary {
+  padding: 85px;
+  margin-right: 0px;
+  align-items: center;
+}
+
+
+
+.summary__title {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.summary__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 5px;
+}
+.summary__score {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+.summary__stars {
+  font-size: 1.2rem;
+  color: #b64ade;
+  letter-spacing: 0.05em;
+}
+.summary__link {
+  font-size: 0.9rem;
+  color: #b64ade;
+  text-decoration: none;
+}
+.summary__recommend {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Optional: Style pour le second onglet Questions & Réponses */
+
+.reviews__panel:nth-child(2) { display: none; }
+.reviews__tab--active:nth-child(2) ~ .reviews__panel:nth-child(2) {
+  display: block;
+}
+
+#ingredient-blanc {
+ background-color: #EEF2F3;
+}
+
+#ingredient-bleu  {
+  background-color: #C8D8DC;
+}
 
 
 
