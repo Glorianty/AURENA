@@ -301,7 +301,7 @@ body {
   color: #666;
 }
 
-.price {
+.price-produits {
   font-size: 18px;
   font-weight: bold;
 }
@@ -1119,12 +1119,24 @@ max-width: 100%;
   min-width: 250px;
   text-decoration: none;
   height: 400px;
-  background-color: #eaeaea;
+  /* background-color: #eaeaea; */
+  /*filter: brightness(70%);*/
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   transition: transform 0.3s ease;
+}
+.carte-bougie_serenite {
+  background-image: url(img/sérénité-bougie.jpg);
+}
+
+.carte-bougie_harmonie {
+  background-image: url(img/Harmonie-bougie.jpg);
+}
+
+.carte-bougie_immunite {
+  background-image: url(img/Immunité-bougie.jpg);
 }
 
 .carte-bougie:hover {
@@ -1373,6 +1385,17 @@ body {
   color: #f6b625;
   font-size: 18px;
 }
+.avis-note {
+  color: #0a6635;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 
 .info-box {
   background: #f9f9f9;
@@ -1408,7 +1431,7 @@ body {
 }
 
 .btn-primary {
-  background: #d9534f;
+  background: #1e1e2f;
  width:70% ;
   color: #fff;
 }
@@ -1510,7 +1533,7 @@ input[type=number] {
 /* SECTION Soin par l’Aromathérapie */
 
 .ingrédient-section {
-  background-color: #fdf5e7;s
+  background-color: #fdf5e7;
   padding: 0; /* plus de padding haut/bas */
 }
 
@@ -1690,7 +1713,7 @@ max-width: 100%;
 }
 .bar-item__fill {
   height: 100%;
-  background: #8e8ea4;
+  background: #1e1e2f;
   border-radius: 999px;
 }
 .bar-item__count {
@@ -1725,12 +1748,12 @@ max-width: 100%;
 }
 .summary__stars {
   font-size: 1.2rem;
-  color: #b64ade;
+  color: #f6b625;
   letter-spacing: 0.05em;
 }
 .summary__link {
   font-size: 0.9rem;
-  color: #b64ade;
+  color: #f6b625;
   text-decoration: none;
 }
 .summary__recommend {
