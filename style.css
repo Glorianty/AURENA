@@ -193,7 +193,7 @@ body {
   padding-left: 125px;
   align-items: center;
   overflow: hidden;
-  background-image: url(img/bannière-2.jpg);  /* ← ton fichier image ici */
+  background-image: url(./img/bannière-2.jpg);  /* ← ton fichier image ici */
   background-size: cover;            /* pour qu'elle couvre tout le conteneur */
   background-position: center 60%; /* déplace le point focal */
   color:  #9A99AE;
