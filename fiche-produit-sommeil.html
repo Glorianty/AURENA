@@ -24,7 +24,7 @@
   <header class="site-header">
     <div class="bloc-header">
       <!-- Logo à gauche -->
-      <a href="page accueil.html" class="logo">
+      <a href="./index.html" class="logo">
         <img src="Icons/Logo-aurena.svg" alt="page accueil.html">
       </a>
   
@@ -57,23 +57,23 @@
 
         <div class="slider">
           <div class="slider-main" id="main-image">
-            <span class="arrow left" onclick="changeSlide(-1)">‹</span>
+            <span class="arrow left arrow-left" onclick="changeSlide(-1)">‹</span>
             <img id="main-img" src="./img/sommeil-img-4.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
             <!--<div id="main-slide" style="width:100%; height:100%; background:#e6e6e6;"></div>-->
-            <span class="arrow right" onclick="changeSlide(1)">›</span>
+            <span class="arrow right arrow-right" onclick="changeSlide(1)">›</span>
           </div>
           <div class="slider-thumbs">
             <div>
-              <img src="./img/sommeil-img-1.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
+              <img class="display-img" src="./img/sommeil-img-1.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
             </div>
             <div >
-              <img src="./img/sommeil-img-3.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
+              <img class="display-img" src="./img/sommeil-img-3.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
             </div>
             <div >
-              <img src="./img/sommeil-img-2.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
+              <img class="display-img" src="./img/sommeil-img-2.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
             </div>
             <div >
-              <img src="./img/sommeil-img-4.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
+              <img class="display-img" src="./img/sommeil-img-4.jpg" style="width:100%; height:100%; background:#e6e6e6;" alt="">
             </div>
           </div>
         </div>
@@ -353,13 +353,36 @@
 </footer>
     
       <script>
-        let img_links = ["","","",""]
+
+        // Gestion des images principales et des vignettes
+        let mainimgindex = 0;
         let mainimg = document.getElementById("main-img")
-        let displayimg1 = document.getElementById("display_img-1")
-        displayimg1.addEventListener('click', console.log('hi'))
+        let displayimgs = document.querySelectorAll(".display-img");
+        let main_imgarrow_left = document.querySelector(".arrow-left");
+        let main_imgarrow_right = document.querySelector(".arrow-right");
+        displayimgs.forEach((img, index) => {
+          img.addEventListener("click", () => {
+            mainimg.src = img.src;
+            mainimgindex = index;
+            console.log("Image principale changée à l'index:", mainimgindex);
+          });
+        });
+
+        // gere les boutton flèche qui change l'image principale
+
+        main_imgarrow_left.addEventListener("click", () => {
+          mainimgindex = (mainimgindex - 1 + displayimgs.length) % displayimgs.length;
+          mainimg.src = displayimgs[mainimgindex].src;
+          console.log("Image principale changée à l'index:", mainimgindex);
+        });
+        main_imgarrow_right.addEventListener("click", () => {
+          mainimgindex = (mainimgindex + 1) % displayimgs.length;
+          mainimg.src = displayimgs[mainimgindex].src;
+          console.log("Image principale changée à l'index:", mainimgindex);
+        });
 
 
-        displayimg
+
        // let current = 0;
       //  const slides = document.querySelectorAll(".slider-thumbs div");
       //  const mainSlide = document.getElementById("main-slide");
@@ -375,7 +398,6 @@
        // }
     
         // Init
-        showSlide(0);
       </script>
 
  <!-- deroulant -->
